@@ -6,7 +6,6 @@ resources:
   - job.yaml
   - rbac.yaml
   - patch-device-plugin-config.yaml
-  - machineset-patch.yaml
 
 generatorOptions:
   disableNameSuffixHash: true
