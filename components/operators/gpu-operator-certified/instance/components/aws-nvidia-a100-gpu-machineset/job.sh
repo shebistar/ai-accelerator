@@ -23,7 +23,7 @@ ocp_aws_create_gpu_machineset(){
   # https://aws.amazon.com/ec2/instance-types/dl1
   # 8 x gaudi:  dl1.24xlarge
 
-  INSTANCE_TYPE=${1:-g5.4xlarge}
+  INSTANCE_TYPE=${1:-g5.xlarge}
 
   ocp_aws_clone_machineset "${INSTANCE_TYPE}"
 
@@ -71,7 +71,7 @@ ocp_aws_clone_machineset(){
 }
 
 ocp_create_machineset_autoscale(){
-  MACHINE_MIN=${1:-0}
+  MACHINE_MIN=${1:-1}
   MACHINE_MAX=${2:-4}
   MACHINE_SETS=${3:-$(oc -n openshift-machine-api get machinesets.machine.openshift.io -o name | sed 's@.*/@@' )}
 
