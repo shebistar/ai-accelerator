@@ -1,0 +1,16 @@
+apiVersion: nvidia.com/v1
+kind: ClusterPolicy
+metadata:
+  name: gpu-cluster-policy
+spec:
+  devicePlugin:
+    config:
+      default: A100-24G
+      name: device-plugin-config
+  gfd:
+    enabled: true
+  mig:
+    strategy: mixed
+  migManager:
+    config:
+      name: custom-mig-config
