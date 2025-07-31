@@ -6,6 +6,7 @@ resources:
   - job.yaml
   - rbac.yaml
   - patch-device-plugin-config.yaml
+  - patch-gpu-cluster-policy.yaml
 
 generatorOptions:
   disableNameSuffixHash: true

@@ -3,18 +3,10 @@ kind: ConfigMap
 metadata:
   name: device-plugin-config
 data:
-  A100-24GB: |-
+  time-sliced: |-
     version: v1
     sharing:
       timeSlicing:
         resources:
           - name: nvidia.com/gpu
-            replicas: 6
-          - name: nvidia.com/mig-1g.4gb
-            replicas: 1
-          - name: nvidia.com/mig-2g.8gb
-            replicas: 2
-          - name: nvidia.com/mig-3g.12gb
-            replicas: 3
-          - name: nvidia.com/mig-6g.24gb
-            replicas: 6
+            replicas: 4
