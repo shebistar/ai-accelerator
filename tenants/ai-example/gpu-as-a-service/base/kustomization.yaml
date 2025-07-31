@@ -13,3 +13,4 @@ labels:
 resources:
   - example-workbench-pvc.yaml
   - example-workbench.yaml
+  - example-llm.yaml
