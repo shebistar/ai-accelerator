@@ -8,4 +8,6 @@ spec:
       default: time-sliced
       name: device-plugin-config
   gfd:
-    enabled: true
+    enabled: truea
+  driver:
+    useNvidiaDriverCRD: true
